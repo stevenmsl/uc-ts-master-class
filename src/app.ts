@@ -31,3 +31,19 @@ const anotherPerson: Person = {
   age: 30
 };
 */
+
+/* keyof type query */
+/*
+const person = {
+  name: "Todd",
+  age: 27
+};
+
+type Person = typeof person;
+type PersonKeys = keyof Person; //union type
+type PersonTypes = Person[PersonKeys];
+const anotherPerson: Person = {
+  name: "John",
+  age: 30
+};
+*/
