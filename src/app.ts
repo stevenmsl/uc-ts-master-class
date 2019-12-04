@@ -47,3 +47,22 @@ const anotherPerson: Person = {
   age: 30
 };
 */
+
+/* keyof lookup generics */
+/*
+const person = {
+  name: "Todd",
+  age: 27
+};
+
+type Person = typeof person;
+type PersonKeys = keyof Person;
+type PersonTypes = Person[PersonKeys];
+
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
+const personName = getProperty(person, "name");
+const personAge = getProperty(person, "age");
+*/
