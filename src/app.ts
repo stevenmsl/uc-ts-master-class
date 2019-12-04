@@ -94,3 +94,50 @@ const newPerson = freeze(person);
 //newPerson.name = "Joe";
 
 */
+
+/* partial mapped type */
+
+/*
+interface Person {
+  name: string;
+  age: number;
+}
+
+type MyPartial<T> = {
+  [P in keyof T]?: T[P];
+};
+
+function updatePerson(person: Person, prop: MyPartial<Person>): Person {
+  return { ...person, ...prop };
+}
+
+const person: Person = {
+  name: "Todd",
+  age: 27
+};
+const updatedPerson = updatePerson(person, { name: "ABC" });
+console.log(updatedPerson);
+*/
+
+/* required mapped type */
+/*
+interface Person {
+  name: string;
+  age?: number;
+}
+
+type MyRequired<T> = {
+  [P in keyof T]-?: T[P];
+};
+
+function printAge(person: MyRequired<Person>) {
+  return `${person.name} is ${person.age}`;
+}
+
+const person: MyRequired<Person> = {
+  name: "Todd",
+  age: 27
+};
+
+console.log(printAge(person));
+*/
