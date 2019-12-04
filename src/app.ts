@@ -141,3 +141,21 @@ const person: MyRequired<Person> = {
 
 console.log(printAge(person));
 */
+
+/* pick mapped type */
+/*
+interface Person {
+  name: string;
+  age: number;
+  address: {};
+}
+
+type MyPick<T, K extends keyof T> = {
+  [P in K]: T[P];
+};
+
+const person: MyPick<Person, "name" | "age"> = {
+  name: "Todd",
+  age: 27
+};
+*/
