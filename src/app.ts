@@ -66,3 +66,31 @@ function getProperty<T, K extends keyof T>(obj: T, key: K) {
 const personName = getProperty(person, "name");
 const personAge = getProperty(person, "age");
 */
+
+/* readonly mapped type */
+
+/*
+interface Person {
+  name: string;
+  age: number;
+}
+
+const person: Person = {
+  name: "Todd",
+  age: 27
+};
+
+type MyReadonly<T> = {
+  readonly [P in keyof T]: T[P];
+};
+
+function freeze<T>(obj: T): MyReadonly<T> {
+  //Readonly and MyReadonly are considered as the same type
+  return Object.freeze(obj);
+}
+
+const newPerson = freeze(person);
+//Not allowed as all properties are now read-only
+//newPerson.name = "Joe";
+
+*/
