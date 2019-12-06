@@ -435,7 +435,57 @@ class ArtistCreator {
 function artistFactory({ name }: ArtistCreator) {
   return new ArtistCreator(name);
 }
-
 console.log(artistFactory({ name: "Todd" }));
 
+*/
+
+/* generics */
+/*
+class Pizza {
+  constructor(private name: string, private price: number) {}
+}
+
+class List<T> {
+  private list: T[] = new Array<T>();
+  addItem(item: T): void {
+    this.list.push(item);
+  }
+  getList(): T[] {
+    return this.list;
+  }
+}
+
+const list = new List<Pizza>();
+list.addItem(new Pizza("Pepperoni", 15));
+
+const pizzas = list.getList();
+console.log(pizzas);
+
+class Coupon {
+  constructor(private name: string) {}
+}
+
+const anotherList = new List<Coupon>();
+anotherList.addItem(new Coupon("PIZZA25"));
+const coupons = anotherList.getList();
+console.log(coupons);
+*/
+
+/* overloads */
+/*
+function reverse(str: string): string;
+function reverse<T>(arr: T[]): T[];
+function reverse<T>(stringOrArray: string | T[]): string | T[] {
+  if (typeof stringOrArray === "string") {
+    return stringOrArray
+      .split("")
+      .reverse()
+      .join();
+  }
+  return stringOrArray.slice().reverse();
+}
+//Would work as expected even without
+//the corresponding overload functions defined
+console.log(reverse("Pepperoni"));
+console.log(reverse(["bacon", "pepperoni", "chili", "mushrooms"]));
 */
