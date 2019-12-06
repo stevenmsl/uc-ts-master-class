@@ -299,6 +299,7 @@ const playlistName = getItemName(
   new Playlist("The Best Songs", [new Song("The Man", 300000)])
 );
 console.log("Playlist name:", playlistName);
+*/
 
 /* intersection types */
 /*
@@ -343,6 +344,7 @@ console.log(assigned);
 
 /* discriminated union types */
 
+/*
 interface Order {
   id: string;
   amount: number;
@@ -368,7 +370,7 @@ const order: Order = {
 
 const orderCard: CheckoutCard = {
   ...order,
-  type: "stripe",
+  type: "stripe", //
   card: "1000 2000 3000 4000",
   cvc: "123"
 };
@@ -392,3 +394,48 @@ function checkout(payload: Payload) {
 
 checkout(orderCard);
 checkout(orderPayPal);
+*/
+
+/* interface vs type-alias */
+/*
+interface Item {
+  name: string;
+}
+interface Artist extends Item {
+  songs: number;
+}
+
+interface Artist {
+  getSongs(): number;
+}
+
+type Artist2 = { name: string } & Item;
+
+const newArtist: Artist = {
+  name: "ABC",
+  songs: 5,
+  getSongs() {
+    return this.songs;
+  }
+};
+
+console.log(newArtist);
+const newArtist2: Artist2 = {
+  name: "DEF"
+};
+console.log(newArtist2);
+*/
+
+/* interface vs class */
+/*
+class ArtistCreator {
+  constructor(public name: string) {}
+}
+
+function artistFactory({ name }: ArtistCreator) {
+  return new ArtistCreator(name);
+}
+
+console.log(artistFactory({ name: "Todd" }));
+
+*/
