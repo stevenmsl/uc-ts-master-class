@@ -489,3 +489,18 @@ function reverse<T>(stringOrArray: string | T[]): string | T[] {
 console.log(reverse("Pepperoni"));
 console.log(reverse(["bacon", "pepperoni", "chili", "mushrooms"]));
 */
+
+/* enum numeric */
+/*
+enum Sizes {
+  Small,
+  Medium,
+  Large
+}
+enum Sizes {
+  ExtraLarge = 3
+}
+const selectedSize = 2;
+
+console.log(Sizes.Large, Sizes[selectedSize]); // 2 "Large"
+*/
