@@ -5,5 +5,18 @@
     "lib": ["dom", "es6"],
     "outDir": "dist",
     "strict": true
+
+    /* 
+      You don’t actually need the following options for
+      augmenting modules
+    */
+    /*
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/@t`ypes/*"]
+    },
+    
+    "typeRoots": ["src/@types", "node_modules/@types"]
+    */
   }
 }

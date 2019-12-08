@@ -523,7 +523,20 @@ console.log(selected);
 */
 
 /* writing declaration files */
+
 /* import * as _ from "lodash";
 
 console.log(_.chunk([1, 2, 3, 4], 2));
+*/
+
+/* augmenting modules */
+/*
+import * as _ from "lodash";
+
+_.mixin({
+  log(item: string) {
+    console.log(":::", item);
+  }
+});
+_.log("Hello!");
 */
