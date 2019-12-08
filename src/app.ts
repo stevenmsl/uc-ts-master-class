@@ -521,3 +521,9 @@ function updateSize(size: Sizes): void {
 updateSize(Sizes.Large);
 console.log(selected);
 */
+
+/* writing declaration files */
+/* import * as _ from "lodash";
+
+console.log(_.chunk([1, 2, 3, 4], 2));
+*/
